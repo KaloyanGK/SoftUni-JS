@@ -1,5 +1,11 @@
+
 function demo(country) {
-   switch(country){
-       case `England ` || `USA`:
-   }
+    if (country === `England` || country === `USA`) {
+        console.log(`English`);
+    } else if (country === `Spain` || country === `Mexico` || country === `Argentina`) {
+        console.log(`Spanish`);
+    } else {
+        console.log(`unknown`);
+    }
+
 } demo(`Germany`)
