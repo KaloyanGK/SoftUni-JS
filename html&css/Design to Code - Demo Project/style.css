@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css");
+
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+*,
+*:after,
+a:before {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+.nav {
+  padding: 15px 80px;
+  box-shadow: 1px 1px 9px -5px black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+@media all and (max-width: 1200px) {
+  .nav {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+.nav-menu li {
+  list-style-type: none;
+  margin: 0 7px;
+}
+@media all and (max-width: 850px) {
+  .nav-menu {
+    flex-direction: column;
+  }
+  .nav-menu li {
+    margin: 7px auto;
+  }
+}
+.nav-menu li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #54546d;
+  margin: 0 7px;
+}
+.btn {
+  background-color: #9b5dc6;
+  color: white;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 1px 1px 9px -5px black;
+  padding: 8px 12px;
+}
+.header-certificates {
+  padding: 30px 80px;
+  display: flex;
+  overflow: hidden;
+}
+.header-certificates-content {
+  margin-right: 100px;
+}
+.header-certificates-content-title {
+  color: #54546d;
+}
+.header-certificates-content-subtitle {
+  color: gray;
+  font-size: 12px;
+  font-style: italic;
+  margin: 5px 0px;
+}
+.header-certificates-img {
+  position: relative;
+}
+
+.header-certificates-img::before {
+  content: "";
+  background-color: #54536f;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  border-radius: 50%;
+  z-index: -2;
+  right: -106px;
+  top: -290px;
+}
+.header-certificates-img::after {
+  background: url(./images/award.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 300px;
+  height: 100%;
+  top: -73px;
+  left: 193px;
+}
+@media all and (max-width: 1200px) {
+  .header-certificates-img::after,
+  .header-certificates-img::before {
+    display: none;
+  }
+  .header-certificates {
+    flex-direction: column;
+  }
+  .header-certificates-img {
+    margin-top: 50px;
+  }
+  .header-certificates-content {
+    margin-right: 0;
+  }
+  .header-certificates {
+    padding: 40px 20px;
+  }
+}
+.cpe {
+  background-color: #14152d;
+  color: white;
+  padding: 40px 80px;
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  position: relative;
+}
+.cpe-content {
+  margin-right: 70px;
+}
+.cpe-img {
+  position: relative;
+  top: 88px;
+}
+@media all and(max-width:1000px) {
+  .cpe {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .cpe-content {
+    margin-right: 0;
+  }
+  .cpe-img {
+    top: 20px;
+  }
+}
+.career-assitance {
+  margin-top: 100px;
+  display: flex;
+  padding: 30px 80px;
+  align-items: center;
+}
+.career-assitance-img {
+  margin-right: 50px;
+}
+.career-assitance-img img {
+  border-radius: 12px;
+}
+.career-assitance-content-title {
+  color: #54536f;
+  margin-bottom: 25px;
+}
+.career-assitance-content-text {
+  line-height: 27px;
+}
+.light-btn {
+  background-color: white;
+  color: #a858d0;
+  border: 1px solid #a858d0;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 12px 18px;
+  text-decoration: none;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+@media all and (max-width: 1000px) {
+  .career-assitance {
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 30px 20px;
+  }
+  .career-assitance-img {
+    order: 2;
+    margin-top: 40px;
+  }
+  .career-assitance-content {
+    order: 1;
+  }
+}
+footer{
+  background-color: #2c2c3b ;
+  color:white;
+  padding:30px 80px;
+  display:flex;
+  justify-content: space-between;
+}
+.footer-menu-title{
+  font-weight: bold;
+  color:#a655cc;
+  margin:0 0 20px 0;
+
+}
+.footer-menu-nav{
+  padding-left:0;
+}
+.footer-menu-nav-item{
+  list-style-type: none;
+  margin:8px 0;
+}
+.footer-menu-nav-item a{
+  color:white;
+  text-decoration: none;
+}
+.footer-social-media{
+  margin-bottom:35px;
+}
+.footer-social-media i{
+  font-size:30px;
+  margin:0 12px 0 0;
+}
+.footer-coypy-right{
+  font-size:14px;
+}
+@media all and (max-width:1000px){
+  footer{
+    flex-wrap: wrap;
+  }
+}

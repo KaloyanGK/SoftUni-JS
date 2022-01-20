@@ -1,0 +1,52 @@
+body {
+  margin: 80px auto;
+  background-color: rgb(238, 238, 238);
+  font-family: Helvetica, sans-serif;
+}
+.card-layout {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.title {
+  font-family: Georgia, serif;
+  font-size: 29px;
+  margin-bottom: 33px;
+}
+.card {
+  background-color: white;
+  border: 1px solid gray;
+  box-shadow: 1px 1px 10px -3px grey;
+  border-radius: 12px;
+  margin: 10px;
+}
+.card img {
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.card-content,
+.card footer {
+  padding: 12px;
+}
+.card footer {
+  border-top: 1px solid gray;
+}
+.mansory .card {
+  display: inline-block;
+}
+.masonry section {
+  column-count: 3;
+}
+.flex section {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.flex .card{
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.flex .card .card-content{
+    flex-grow:1;
+}

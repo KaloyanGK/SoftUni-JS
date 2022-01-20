@@ -1,0 +1,33 @@
+body {
+ padding:100px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #eeeeee;
+}
+* {
+  box-sizing: border-box;
+}
+header,main,aside,footer{
+    
+    box-shadow: 1px 1px 1px black;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background-color: white;
+}
+header{
+    flex-basis: 100%;
+    padding:10px 10px 70px 10px;
+}
+main,aside {
+    margin:20px 0px;
+    flex-grow: 1;
+    padding:10px 10px 200px 10px;
+}
+main{
+    flex-grow: 3;
+    margin-right:20px;
+}
+footer{
+    flex-basis: 100%;
+    padding:10px 10px 50px 10px;
+}

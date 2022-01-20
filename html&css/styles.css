@@ -1,0 +1,9 @@
+#title {
+  text-align: right;
+  text-decoration: solid;
+  text-transform: uppercase;
+  border:3px solid black;
+}
+p {
+  text-indent: 50px;
+}

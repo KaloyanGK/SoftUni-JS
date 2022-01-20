@@ -1,0 +1,57 @@
+html {
+    font-family: Helvetica, sans-serif;
+    margin-right:30px;
+}
+body{
+    max-width: 1200px;
+    margin:70px auto;
+    background-color:rgb(238, 238, 238)  ;
+
+}
+header{
+    
+    border-bottom:2px solid black;
+    margin-bottom:50px;
+}
+h1, nav{
+display: inline-block;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 12px;
+}
+nav a {
+    text-decoration: none;
+    color:#00a300;
+
+}
+main, aside {
+    display: inline-block;
+}
+main {
+    width:70%;
+    padding-right: 80px;
+}
+aside {
+    width:28%;
+    vertical-align: top;
+}
+li{
+    list-style: square;
+}
+aside li a {
+    text-decoration: none;
+    color:lightgreen;
+
+}
+img {
+    background-color:  rgb(255, 255, 255) ;
+    box-shadow: rgba(0, 0, 0, 0.25) ;
+}
+blockquote{
+    font-family: Georgia,serif;
+}
+h1,h2,h3{
+    font-family: Georgia,serif;
+    font-size:1em/1.2;
+}

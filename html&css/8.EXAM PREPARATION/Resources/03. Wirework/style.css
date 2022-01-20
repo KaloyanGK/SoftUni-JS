@@ -1,0 +1,174 @@
+@import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css");
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 70px;
+  align-items: center;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+.header-logo-site-title {
+  font-size: 36px;
+  padding-right: 25px;
+  position: relative;
+}
+.header-logo-site-title::after {
+  content: "";
+  background-color: gray;
+  width: 2px;
+  height: 90%;
+  position: absolute;
+  right: 10px;
+}
+.header-logo-site-source {
+  color: gray;
+  font-size: 15px;
+  font-weight: normal;
+}
+.header-nav-list {
+  padding-right: 0;
+  display: flex;
+}
+.header-nav-list-item {
+  list-style: none;
+  background-color: #ececec;
+  padding: 18px;
+  margin: 0 1px;
+}
+.header-nav-list-item-link {
+  text-decoration: none;
+  color: black;
+}
+.header-nav-list-item.active {
+  background-color: #f43f0e;
+}
+.header-nav-list-item.active a {
+  color: white;
+}
+.intro-img {
+  width: 100%;
+  overflow: hidden;
+}
+.intro-img img {
+  max-height: 600px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.intro-content {
+  text-align: center;
+  background-color: #f43f0e;
+  padding: 80px 160px;
+  color: white;
+  margin-top: -10px;
+}
+.intro-content-text {
+  line-height: 38px;
+}
+.intro-content-text a {
+  color: white;
+}
+.benefits {
+  background-color: #383838;
+  padding: 80px 130px;
+  display: flex;
+}
+.benefit {
+  margin: 0px 12px;
+}
+.benefit-img {
+  background-color: #f43f0e;
+  padding: 30px;
+  width: fit-content;
+  margin: 0 auto;
+}
+.benefit-img i {
+  color: white;
+  font-size: 55px;
+}
+.benefit-title {
+  color: white;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 40px;
+}
+.benefit-title::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #686759;
+  position: absolute;
+  left: 0;
+  bottom: 18px;
+}
+.benefit:first-child .benefit-title::after {
+  bottom: 5px;
+}
+.benefit-text {
+  color: #686759;
+  text-align: center;
+}
+.cta {
+  padding: 80px 100px;
+  text-align: center;
+}
+.cta-title {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+.cta-text {
+  margin-top: 0;
+}
+.cta-btn {
+  background-color: #009a6f;
+  color: white;
+  padding: 12px 26px;
+  margin-top: 20px;
+  border: none;
+  letter-spacing: 1px;
+}
+.skills {
+  padding: 90px 50px;
+  display: flex;
+  align-items: center;
+  background-color: #383838;
+  text-align: center;
+}
+.skill-title {
+  color: white;
+  margin-bottom: 40px;
+  font-weight: normal;
+}
+.skill-text {
+  color: #747474;
+}
+.skill {
+  margin: 0 10px;
+}
+footer {
+  padding: 120px;
+  text-align: center;
+  background-color: #009a6f;
+}
+.footer-text {
+  color: #afdacd;
+  letter-spacing: 1px;;
+}
+.footer-text a {
+  text-decoration: none;
+  color: #e2f0ec;
+}

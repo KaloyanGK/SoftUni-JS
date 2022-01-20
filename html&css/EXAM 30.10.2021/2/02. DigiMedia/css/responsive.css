@@ -1,0 +1,15 @@
+/* TODO: Add responsive styles here... */
+@media all and (max-width: 600px) {
+  .container-fluid img {
+    display: none;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about{
+    display: flex;
+    flex-direction: column;
+  }
+}

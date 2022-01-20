@@ -1,0 +1,166 @@
+@import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;1,400&display=swap");
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.first-section {
+  display: flex;
+  width: 600px;
+  align-items: center;
+  background-color: #efefef;
+}
+.first-section-menu {
+  display: flex;
+  align-items: center;
+  margin: 20px 20px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.first-section-menu i {
+  margin-left: 10px;
+}
+main {
+  position: relative;
+}
+.first-section-img {
+  width: 100px;
+  background-color: #efefef;
+  object-fit: contain;
+}
+.first-section-img img {
+  width: 500px;
+}
+
+.first-section-content {
+  padding-left: 30px;
+  margin-left: 20px;
+}
+.first-section-content p {
+  font-style: italic;
+}
+.first {
+  background-color: #efefef;
+}
+span {
+  font-weight: bold;
+  font-size: 40px;
+}
+.first-section-img::after {
+  content: "";
+  background-color: black;
+  width: 1.5px;
+  height: 3%;
+  position: absolute;
+  left: 50px;
+  top: 290px;
+}
+.second {
+  margin-top: 20px;
+  display: flex;
+  background-color: #efefef;
+  align-items: center;
+  position: relative;
+}
+.second-section-content {
+  margin: 20px 30px;
+}
+.second-section-header::before {
+  content: "";
+  width: 10%;
+  height: 1px;
+  background-color: #686759;
+  position: absolute;
+  left: 500px;
+  top: 150px;
+}
+.second-section-content p {
+  font-style: italic;
+}
+
+.second-section-social-media i {
+  font-size: 20px;
+  margin: 0 12px 0 0;
+  color: white;
+  background-color: gray;
+  padding: 5px;
+}
+.third-img img {
+  margin-top: 20px;
+  width: 100%;
+}
+.fourth {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #efefef;
+}
+.fourth-content {
+  padding: 20px 40px;
+}
+.fourth-img img {
+  width: 70%;
+  margin: 50px 50px;
+}
+.fourth {
+  position: relative;
+}
+
+.fourth-content::after {
+  content: "";
+  background-color: black;
+  width: 1.5px;
+  height: 15%;
+  position: absolute;
+  left: 50px;
+  top: 180px;
+}
+.fifth {
+  margin-top: 20px;
+  display: flex;
+  position: relative;
+  background-color: #efefef;
+  padding: 50px;
+}
+.fifth img {
+  width: 80%;
+}
+
+.fifth-first-img {
+  position: relative;
+  left: 180px;
+  top: 50px;
+}
+.fifth-second-img {
+  z-index: 1;
+  width: 200%;
+}
+.fifth-third-img {
+  position: relative;
+  right: 180px;
+  top: 50px;
+}
+footer {
+  background-color: #efefef;
+  text-align: center;
+}
+.button {
+  background-color: black;
+  color: white;
+  border: none;
+  width: 600px;
+  cursor: pointer;
+}
+input,
+textarea {
+  background-color: #efefef;
+  border:1px black solid;
+  margin:20px;
+}
+.footer{
+    margin-top:80px;
+}

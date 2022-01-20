@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+body header {
+  display: flex;
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+header nav ul li a {
+  color: rgb(0, 153, 0);
+  text-decoration: none;
+}
+header h1 {
+  text-transform: uppercase;
+}
+header nav ul li {
+  list-style-type: none;
+  padding: 10px;
+}
