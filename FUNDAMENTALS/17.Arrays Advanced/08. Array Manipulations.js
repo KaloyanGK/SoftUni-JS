@@ -1,13 +1,14 @@
 function arrManipylation(arr) {
   let array = arr;
   let newArray = array.shift().split(` `).map(Number);
+  console.log(newArray);
 
   for (i = 0; i < array.length; i++) {
     let currElOfArr = array[i].split(` `);
-
     let currCommand = currElOfArr[0];
     let currIndexForInsert = 0;
     let number = 0;
+
     if (currCommand === "Insert") {
       number = Number(currElOfArr[1]);
       currIndexForInsert = Number(currElOfArr[2]);
