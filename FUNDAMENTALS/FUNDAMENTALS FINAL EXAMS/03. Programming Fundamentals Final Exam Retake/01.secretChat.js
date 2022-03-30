@@ -7,7 +7,7 @@ function solve(input) {
         if (command === `InsertSpace`) {
             let index = Number(el[1]);
             let first = text.substring(0, index);
-            let second = text.substring(index, text.length);
+            let second = text.substring(index);
             text = first + ` ` + second;
             console.log(text);
         }
