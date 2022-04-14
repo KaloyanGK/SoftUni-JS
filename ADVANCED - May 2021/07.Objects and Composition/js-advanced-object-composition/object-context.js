@@ -8,13 +8,13 @@ let car = {
 };
 
 car.honk();
-car.model = 'Mercedess';
-car.honk();
+// car.model = 'Mercedess';
+// car.honk();
 
-// Change execution context
-let singleHonk = car.honk;
+// // Change execution context
+// let singleHonk = car.honk;
 
-singleHonk();
+// singleHonk();
 
 let russianMachine = {
     model: 'Lada'

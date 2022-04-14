@@ -11,12 +11,12 @@ let car = {
     }
 };
 
-// car['honk']();
+car.honk();
 
 // Print nested value
-console.log(car.owner.name);
-console.log(car.owner['name']);
-console.log(car['owner']['name']);
+// console.log(car.owner.name);
+// console.log(car.owner['name']);
+// console.log(car['owner']['name']);
 
 // Nested destructuring
 let { owner } = car;
