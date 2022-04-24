@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="header">Hello Seria A</h1>
+    <p>Who will be this year champion?</p>
+    <p>It is going to be a rollercoster!</p>
+    <div class="table">
+        <ol>
+            <li id="first">AC Milan</li>
+            <li id="second">Inter</li>
+            <li id="third">Juventus</li>
+            <li>Napoli</li>
+        </ol>
+    </div>
+    <form action="#">
+        <label for="username">Username</label>
+        <input type="text" id="username" />
+        <label for="username">Password</label>
+        <input type="text" id="password" />
+        <input type="submit" value="Login" onclick="loginHandler()" />
+        <input type="submit" value="Login2" onclick="loginHandler2()" />
+    </form>
+    <button onclick="changeTitle()">CLICK HERE</button>
+    <button onclick="changeTitleAgain()">THEN CLICK HERE</button>
+    <script>
+        function loginHandler() {
+            let inputElement = document.getElementById(`username`);
+            if (inputElement.value == `Kaloyan`) {
+                console.log(`We have a match!`);
+            } else {
+                console.log(`Not Matched!`);
+            }
+        }
+        function loginHandler2() {
+            let inputElement2 = document.getElementById(`password`);
+            console.log(inputElement2);
+        }
+        function changeTitle() {
+            let inputElement = document.getElementById(`header`);
+            inputElement.textContent = `FORZA MILAN`;
+        }
+        function changeTitleAgain() {
+            let inputElement = document.getElementById(`header`);
+            inputElement.innerHTML = `<em>Hello Seria A</em>`;
+        }
+    </script>
+</body>
+
+</html>
