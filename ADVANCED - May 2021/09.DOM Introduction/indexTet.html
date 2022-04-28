@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="first">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, id.</p>
+    </section>
+    <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, culpa!</p>
+    </section>
+    <section class="first">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, culpa!</p>
+    </section>
+
+    <p class="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, culpa!</p>
+
+    <script>
+        let items = document.getElementsByClassName(`first`);
+        let second = items[2]
+        if(second.includes(`Lorem`)){
+            console.log(`true`);
+        }
+    </script>
+</body>
+
+</html>
