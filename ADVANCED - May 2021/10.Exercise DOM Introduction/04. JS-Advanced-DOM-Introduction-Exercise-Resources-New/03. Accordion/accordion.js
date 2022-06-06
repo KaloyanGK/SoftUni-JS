@@ -12,4 +12,3 @@ function toggle() {
     }
 
 }
-document.getele

@@ -1,8 +1,7 @@
 function search() {
    let useWord = document.getElementById(`searchText`).value;
-   let towns = document.querySelectorAll(`#towns li`);
-   let towsnArr = Array.from(towns);
-   
+   let towsnArr = Array.from(document.querySelectorAll(`#towns li`));
+
    let match = document.getElementById(`result`);
    let counter = 0;
    for (let town of towsnArr) {

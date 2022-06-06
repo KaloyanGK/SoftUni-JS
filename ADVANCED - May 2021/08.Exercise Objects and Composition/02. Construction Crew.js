@@ -1,7 +1,7 @@
 function solve(obj) {
     if (obj.dizziness == true) {
         obj.levelOfHydrated += obj.weight * obj.experience * 0.1;
-        obj[`dizziness`] = false
+        obj[`dizziness`] = false;
     }
     return obj;
 }
@@ -10,6 +10,4 @@ solve({
     experience: 20,
     levelOfHydrated: 200,
     dizziness: true
-}
-
-)
+})

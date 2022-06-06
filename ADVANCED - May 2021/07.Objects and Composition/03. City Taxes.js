@@ -1,21 +1,23 @@
-function cityTaxes(name, population, treasury) {
-    let result = {
-        name,
-        population,
-        treasury,
+function cityTaxes(cityName, cityPopulation, cityTreasury) {
+
+    let object = {
+        name: cityName,
+        population: cityPopulation,
+        treasury: cityTreasury,
         taxRate: 10,
         collectTaxes() {
             this.treasury += this.population * this.taxRate;
         },
-        applyGrowth(percentage) {
-            this.population += this.population * (percentage / 100);
+        applyGrowth(percent) {
+            percent /= 100;
+            this.population *= percent + 1;
         },
-        applyRecession(percentage) {
-            this.treasury -= this.treasury / (percentage / 100)
+        applyRecession(percent) {
+            percent /= 100;
+            this.treasury *= 1 - percent;
         }
-    }
-    return result;
-
+    };
+    return object;
 }
 
 const city =

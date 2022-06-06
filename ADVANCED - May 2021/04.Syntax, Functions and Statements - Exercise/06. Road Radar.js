@@ -1,5 +1,4 @@
 function solve(speed, area) {
-
     let motorwayLimit = 130;
     let interstateLimit = 90;
     let cityLimit = 50;
@@ -12,16 +11,20 @@ function solve(speed, area) {
         } else {
             diff = speed - motorwayLimit;
             if (diff <= 20) {
-                status = `speeding`
-                console.log(`The speed is ${diff} km/h faster than the allowed speed of ${motorwayLimit} - ${status}`);
+                status = `speeding`;
+                console.log(
+                    `The speed is ${diff} km/h faster than the allowed speed of ${motorwayLimit} - ${status}`
+                );
             } else if (diff > 20 && diff <= 40) {
-                status = `excessive speeding`
-                console.log(`The speed is ${diff} km/h faster than the allowed speed of ${motorwayLimit} - ${status}`);
-
+                status = `excessive speeding`;
+                console.log(
+                    `The speed is ${diff} km/h faster than the allowed speed of ${motorwayLimit} - ${status}`
+                );
             } else {
-                status = `reckless driving`
-                console.log(`The speed is ${diff} km/h faster than the allowed speed of ${motorwayLimit} - ${status}`);
-
+                status = `reckless driving`;
+                console.log(
+                    `The speed is ${diff} km/h faster than the allowed speed of ${motorwayLimit} - ${status}`
+                );
             }
         }
     } else if (area === `interstate`) {
@@ -30,16 +33,20 @@ function solve(speed, area) {
         } else {
             diff = speed - interstateLimit;
             if (diff <= 20) {
-                status = `speeding`
-                console.log(`The speed is ${diff} km/h faster than the allowed speed of ${interstateLimit} - ${status}`);
+                status = `speeding`;
+                console.log(
+                    `The speed is ${diff} km/h faster than the allowed speed of ${interstateLimit} - ${status}`
+                );
             } else if (diff > 20 && diff <= 40) {
-                status = `excessive speeding`
-                console.log(`The speed is ${diff} km/h faster than the allowed speed of ${interstateLimit} - ${status}`);
-
+                status = `excessive speeding`;
+                console.log(
+                    `The speed is ${diff} km/h faster than the allowed speed of ${interstateLimit} - ${status}`
+                );
             } else {
-                status = `reckless driving`
-                console.log(`The speed is ${diff} km/h faster than the allowed speed of ${interstateLimit} - ${status}`);
-
+                status = `reckless driving`;
+                console.log(
+                    `The speed is ${diff} km/h faster than the allowed speed of ${interstateLimit} - ${status}`
+                );
             }
         }
     } else if (area === `city`) {
@@ -48,16 +55,20 @@ function solve(speed, area) {
         } else {
             diff = speed - cityLimit;
             if (diff <= 20) {
-                status = `speeding`
-                console.log(`The speed is ${diff} km/h faster than the allowed speed of ${cityLimit} - ${status}`);
+                status = `speeding`;
+                console.log(
+                    `The speed is ${diff} km/h faster than the allowed speed of ${cityLimit} - ${status}`
+                );
             } else if (diff > 20 && diff <= 40) {
-                status = `excessive speeding`
-                console.log(`The speed is ${diff} km/h faster than the allowed speed of ${cityLimit} - ${status}`);
-
+                status = `excessive speeding`;
+                console.log(
+                    `The speed is ${diff} km/h faster than the allowed speed of ${cityLimit} - ${status}`
+                );
             } else {
-                status = `reckless driving`
-                console.log(`The speed is ${diff} km/h faster than the allowed speed of ${cityLimit} - ${status}`);
-
+                status = `reckless driving`;
+                console.log(
+                    `The speed is ${diff} km/h faster than the allowed speed of ${cityLimit} - ${status}`
+                );
             }
         }
     } else if (area === `residential`) {
@@ -66,22 +77,25 @@ function solve(speed, area) {
         } else {
             diff = speed - residentialLimit;
             if (diff <= 20) {
-                status = `speeding`
-                console.log(`The speed is ${diff} km/h faster than the allowed speed of ${residentialLimit} - ${status}`);
+                status = `speeding`;
+                console.log(
+                    `The speed is ${diff} km/h faster than the allowed speed of ${residentialLimit} - ${status}`
+                );
             } else if (diff > 20 && diff <= 40) {
-                status = `excessive speeding`
-                console.log(`The speed is ${diff} km/h faster than the allowed speed of ${residentialLimit} - ${status}`);
-
+                status = `excessive speeding`;
+                console.log(
+                    `The speed is ${diff} km/h faster than the allowed speed of ${residentialLimit} - ${status}`
+                );
             } else {
-                status = `reckless driving`
-                console.log(`The speed is ${diff} km/h faster than the allowed speed of ${residentialLimit} - ${status}`);
-
+                status = `reckless driving`;
+                console.log(
+                    `The speed is ${diff} km/h faster than the allowed speed of ${residentialLimit} - ${status}`
+                );
             }
         }
     }
-
 }
-solve(40, 'city')
-solve(21, 'residential')
-solve(120, 'interstate')
-solve(200, 'motorway')
+solve(40, "city");
+solve(21, "residential");
+solve(120, "interstate");
+solve(200, "motorway");

@@ -7,9 +7,9 @@ function solve() {
             fight() {
                 this.stamina--;
                 console.log(`${name} slashes at the foe!`);
-            }
-        }
-    }
+            },
+        };
+    };
     let mage = (name) => {
         return {
             name,
@@ -18,20 +18,20 @@ function solve() {
             cast(spellName) {
                 this.mana--;
                 console.log(`${name} case ${spellName}`);
-            }
-        }
-    }
-    return { fighter: fighter, mage: mage }
+            },
+        };
+    };
+
+    return { fighter, mage };   
 }
-solve()
+solve();
 let create = solve();
 const scorcher = create.mage("Scorcher");
-scorcher.cast("fireball")
-scorcher.cast("thunder")
-scorcher.cast("light")
+scorcher.cast("fireball");
+scorcher.cast("thunder");
+scorcher.cast("light");
 
 const scorcher2 = create.fighter("Scorcher 2");
-scorcher2.fight()
-
+scorcher2.fight();
 console.log(scorcher2.stamina);
 console.log(scorcher.mana);

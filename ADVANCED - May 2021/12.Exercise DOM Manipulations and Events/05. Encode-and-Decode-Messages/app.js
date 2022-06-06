@@ -12,4 +12,4 @@ function encodeAndDecodeMessages() {
         textAreas[1].value = message;
     })
 
-}
+};

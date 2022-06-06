@@ -1,6 +1,8 @@
 function solve(input) {
   let arr = [];
+
   let [a, b, c] = input.shift().slice(2, -2).split(` | `);
+
   for (let el of input) {
     let object = {};
 

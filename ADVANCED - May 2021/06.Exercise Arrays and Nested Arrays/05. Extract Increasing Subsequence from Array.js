@@ -1,25 +1,20 @@
-function solve(input) {
+function solve(arr) {
+
+
+    let smallest = Number.MIN_SAFE_INTEGER;
     let newArr = [];
-    let number = Number.MIN_SAFE_INTEGER;
-    for (let i = 0; i < input.length; i++) {
-        let currNum = input[i];
-        if (currNum >= number) {
-            newArr.push(currNum);
-            number = currNum;
-
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= smallest) {
+            newArr.push(arr[i]);
+            smallest = arr[i];
         }
-
     }
     return newArr;
 }
-solve([1,
-    3,
-    8,
-    4,
-    10,
-    12,
+solve([20,
     3,
     2,
-    24]
-
-)
+    15,
+    6,
+    1]
+);

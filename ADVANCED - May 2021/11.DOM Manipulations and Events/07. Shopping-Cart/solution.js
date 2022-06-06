@@ -1,31 +1,28 @@
 function solve() {
-   let buttons = Array.from(document.getElementsByClassName(`add-product`));
-   let result = document.querySelector(`textarea`);
-   let checkoutButton = document.querySelector(`.checkout`);
-
-   let total = 0;
-   let productList = []
-
-   for (let el of buttons) {
-
-      el.addEventListener(`click`, function (e) {
-         let currentElement = e.currentTarget.parentElement.parentElement;
-         let productName = currentElement.querySelector(`.product-title`).textContent;
-         let productPrice = Number(currentElement.querySelector(`.product-line-price`).textContent);
-
-         if (!productList.includes(productName)) {
-            productList.push(productName)
-         }
-         result.textContent += `Added ${productName} for ${productPrice.toFixed(2)} to the cart.\n`;
-         total += productPrice;
-
-      });
-
-   }
-
-   checkoutButton.addEventListener(`click`, function () {
-      result.textContent += `You bought ${productList.join(`, `)} for ${total.toFixed(2)}.`;
-   })
-
-
+  let totalPrice = 0;
+  let buttons = document.querySelectorAll(`.add-product`);
+  let productsList = [];
+  let textArea = document.querySelector(`textarea`);
+  let allButtons = document.querySelectorAll(`button`);
+  for (let el of buttons) {
+    el.addEventListener(`click`, function (e) {
+      let parentDiv = el.parentElement.parentElement;
+      let productName = parentDiv.querySelector(`.product-title`).textContent;
+      let productPrice =
+        parentDiv.querySelector(`.product-line-price`).textContent;
+      if (!productsList.includes(productName)) {
+        productsList.push(productName);
+      }
+      totalPrice += Number(productPrice);
+      textArea.textContent += `Added ${productName} for ${productPrice} to the cart.\n`;
+    });
+  }
+  document.querySelector(`.checkout`).addEventListener(`click`, function (e) {
+    textArea.textContent += `You bought ${productsList.join(
+      `, `
+    )} for ${totalPrice.toFixed(2)}.`;
+    for (let el of allButtons) {
+      el.disabled = true;
+    }
+  });
 }

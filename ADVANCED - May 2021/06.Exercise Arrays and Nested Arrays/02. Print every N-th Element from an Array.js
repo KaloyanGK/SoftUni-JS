@@ -4,7 +4,7 @@ function solve(arr, number) {
         let currentNum = arr[i];
         newArr.push(currentNum)
     }
-    console.log(newArr);
+    return newArr;
 }
 solve(['dsa',
     'asd',

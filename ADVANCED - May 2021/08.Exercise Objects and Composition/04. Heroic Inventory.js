@@ -5,7 +5,7 @@ function solve(input) {
         let [name, level, items] = el.split(` / `);
         level = Number(level);
 
-        if (items === undefined) {
+        if (items == undefined) {
             items = [];
             result.push({ name, level, items });
         } else {
@@ -15,8 +15,6 @@ function solve(input) {
     }
     console.log(JSON.stringify(result));
 }
-solve([
-    "Isacc / 25 /",
-    "Derek / 12 / BarrelVest, DestructionSword",
-    "Hes / 1 / Desolator, Sentinel, Antara",
-]);
+solve(['Isacc / 25 / Apple, GravityGun',
+    'Derek / 12 / BarrelVest, DestructionSword',
+    'Hes / 1 / Desolator, Sentinel, Antara']);
