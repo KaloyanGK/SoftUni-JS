@@ -1,17 +1,25 @@
-function listProcessor(commands) {
-    let commandProcessor = (function () {
-        let list = [];
-        return {
-            add: newItem => list.push(newItem),
-            remove: item => list = list.filter(el => el != item),
-            print: () => console.log(list)
-        }
-    })();
+function solve(input) {
 
-    for (let cmd of commands) {
-        [cmdName, arg] = cmd.split(" ");
-        commandProcessor[cmdName](arg);
+    let arr = [];
+
+    function add(str) {
+        arr.push(str)
     }
-}
-listProcessor(['add hello', 'add again', 'remove hello', 'add again', 'print'])
+    function remove(str) {
+        return arr.filter(el => el !== str)
+    }
+    function print() {
+        console.log(arr.join(`,`));
+    }
+    return {
+        add,
+        remove,
+        print,
+    }
+    for (let el of input) {
+        let [command, string] = el.split(` `);
+    }
 
+
+}
+solve(['add hello', 'add again', 'remove hello', 'add again', 'print'])

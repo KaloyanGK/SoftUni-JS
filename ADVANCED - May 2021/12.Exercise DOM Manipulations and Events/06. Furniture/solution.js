@@ -50,7 +50,9 @@ function solve() {
     }
   }
   function buy(e) {
-    const furniture = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+    const furniture = Array.from(
+      document.querySelectorAll('input[type="checkbox"]:checked')
+    )
       .map((b) => b.parentElement.parentElement)
       .map((r) => ({
         name: r.children[1].textContent,

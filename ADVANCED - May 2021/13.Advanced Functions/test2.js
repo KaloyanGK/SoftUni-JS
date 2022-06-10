@@ -1,21 +1,26 @@
-function createRect(a, b) {
-    function getWidth() {
-        return a;
-    }
-    function getHeigth() {
-        return b;
-    }
-    function getArea() {
-        return a * b
-    }
-    return {
-        getWidth,
-        getHeigth,
-        getArea,
+function solve() {
+    let a = 5;
+    let b = 5;
+
+    return function math() {
+        let c = 5;
+        console.log(a + b + c);
     }
 
-};
-const myRect = createRect(5, 3);
-console.log(myRect.getWidth());
-console.log(myRect.getHeigth());
-console.log(myRect.getArea());
+}
+let result = solve();
+result()
+
+// function solve() {
+//     let a = 5;
+//     let b = 5;
+  
+//     function math(n) {
+//       console.log(a + b + n);
+//     }
+//     return {
+//       math,
+//     }
+//   }
+//   let result = solve();
+//   result.math(5)
