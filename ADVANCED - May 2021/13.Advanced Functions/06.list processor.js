@@ -1,24 +1,36 @@
 function solve(input) {
 
     let arr = [];
+    let obj = {
+        add: (array, string) => {
+            return array.push(string);
 
-    function add(str) {
-        arr.push(str)
+        },
+        remove: (array, string) => {
+            while (array.includes(string)) {
+                let index = array.indexOf(string);
+                array.splice(index, 1);
+            }
+        },
+        print: (array) => {
+            console.log(array.join(`,`));
+            return array;
+
+        }
     }
-    function remove(str) {
-        return arr.filter(el => el !== str)
-    }
-    function print() {
-        console.log(arr.join(`,`));
-    }
-    return {
-        add,
-        remove,
-        print,
-    }
-    for (let el of input) {
+
+    return input.forEach(el => {
         let [command, string] = el.split(` `);
-    }
+        if (command == 'add') {
+            obj[command](arr, string)
+        } else if (command == `remove`) {
+            obj[command](arr, string)
+        } else {
+            obj[command](arr)
+        }
+
+    })
+
 
 
 }
