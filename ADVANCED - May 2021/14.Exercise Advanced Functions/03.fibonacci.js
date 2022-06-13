@@ -1,6 +1,13 @@
+function getFibonator() {
+  let arr = [0, 1];
 
-//създаваме променливата, за да можем в конзол лога да изкарам резултата от getFibonator(), а ако логнем
-//само функцията ще изкара всичко в нея?
+  return function () {
+    let startingNum = arr.shift();
+    let nextNum = arr.pop();
+    arr.push(nextNum, startingNum + nextNum);
+    return arr[0];
+  };
+}
 
 let fib = getFibonator();
 
@@ -11,7 +18,3 @@ console.log(fib());
 console.log(fib());
 console.log(fib());
 console.log(fib());
-
-
-
-
