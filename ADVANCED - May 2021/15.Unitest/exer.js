@@ -1,26 +1,25 @@
-function solve(face, paint) {
+function solve(face, suit) {
 
     let faces = [`2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `J`, `Q`, `K`, `A`];
-    let paintObj = {
+    let suits = {
         S: `♠`,
         H: `♥`,
         D: `♦`,
         C: `♣`,
-
     }
     if (!faces.includes(face)) {
-        throw new Error(`Invalid Face`);
+        throw new Error(`Invalid Face`)
     }
-
-
-    let card = {
+    let object = {
         face,
-        paint: paintObj[paint],
+        suit: suits[suit],
         toString() {
-            return this.face + this.paint
+            return this.face + this.suit
         }
     }
-    return card;
+
+    return object;
+
 
 }
 
