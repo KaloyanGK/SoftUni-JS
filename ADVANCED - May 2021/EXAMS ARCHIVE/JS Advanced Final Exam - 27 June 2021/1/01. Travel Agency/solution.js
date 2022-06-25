@@ -1,4 +1,4 @@
-window.addEventListener('load', solution);
+window.addEventListener("load", solution);
 
 function solution() {
   let nameInput = document.getElementById(`fname`);
@@ -44,11 +44,11 @@ function solution() {
 
       editBtn.addEventListener(`click`, (e) => {
 
-        nameInput.value = name;
-        emailInput.value = email;
-        phoneInput.value = phone;
-        addressInput.value = address;
-        postalCodeInput.value = postalCode;
+        nameInput.value = name
+        emailInput.value = email
+        phoneInput.value = phone
+        addressInput.value = address
+        postalCodeInput.value = postalCode
 
         nameInput.disabled = false;
         emailInput.disabled = false;
@@ -59,7 +59,7 @@ function solution() {
         submitBtn.disabled = false;
         editBtn.disabled = true;
         continueBtn.disabled = true;
-        ulList.removeChild(nameLi);
+         ulList.removeChild(nameLi);
         ulList.removeChild(emailLi);
         ulList.removeChild(phoneLi);
         ulList.removeChild(addressLi);
@@ -70,10 +70,8 @@ function solution() {
         mainDiv.innerHTML = ``;
         let h3 = document.createElement(`h3`);
         h3.textContent = `Thank you for your reservation!`;
-        mainDiv.appendChild(h3);
+        mainDiv.appendChild(h3)
       });
-
-
 
       nameInput.value = ``;
       emailInput.value = ``;
@@ -92,8 +90,6 @@ function solution() {
       continueBtn.disabled = false;
 
     }
-
-
 
   })
 
