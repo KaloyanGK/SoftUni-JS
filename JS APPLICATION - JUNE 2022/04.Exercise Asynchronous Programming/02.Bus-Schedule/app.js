@@ -1,35 +1,74 @@
+// function solve() {
+
+//   let arriveBtn = document.getElementById(`arrive`);
+//   let departBtn = document.getElementById(`depart`);
+//   let span = document.querySelector(`#info span`);
+//   let baseUrl = `http://localhost:3030/jsonstore/bus/schedule`;
+//   let stop = {
+//     next: `depot`,
+//   }
+//   function depart() {
+//     arriveBtn.disabled = false;
+//     departBtn.disabled = true;
+//     fetch(`${baseUrl}/${stop.next}`)
+//       .then(responce => responce.json())
+//       .then(data => {
+//         stop = data;
+//         span.textContent = `Next stop ${stop.name}`
+//       })
+//       .catch(error => span.textContent = `Error`)
+//   }
+
+//   function arrive() {
+//     span.textContent = `Arriving at ${stop.name}`;
+
+//     arriveBtn.disabled = true;
+//     departBtn.disabled = false;
+//   }
+
+//   return {
+//     depart,
+//     arrive,
+//   };
+// }
+
+// let result = solve();
 function solve() {
-  let departBtn = document.getElementById(`depart`);
-  let arriveBtn = document.getElementById(`arrive`);
-  let spaneElement = document.querySelector(`#info span`);
-  let busStop = {
-    next: `depot`,
-  };
+ 
+  let spanEl = document.querySelector('#info span');
+  let baseUrl = 'http://localhost:3030/jsonstore/bus/schedule';
+  let nextStop = 'depot';
+  let currStop = '';
+  let departButton = document.getElementById('depart');
+  let arriveButton = document.getElementById('arrive');
+
   function depart() {
-    let url = `http://localhost:3030/jsonstore/bus/schedule/${busStop.next}`;
-
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        busStop = data;
-        spaneElement.textContent = `Next stop ${busStop.name}`;
+      fetch(`${baseUrl}/${nextStop}`)
+      .then(res => res.json())
+      .then(data => {
+          spanEl.textContent = `Next stop ${data.name}`;
+          currStop = data.name;
+          nextStop = data.next;
+          departButton.disabled = true;
+          arriveButton.disabled = false;
       })
-      .catch((error) => (spaneElement.textContent = `Error`));
-
-    departBtn.disabled = true;
-    arriveBtn.disabled = false;
+      .catch(err => {
+          spanEl.textContent = 'Error';
+          departButton.disabled = true;
+          arriveButton.disabled = true;
+      })
   }
 
   function arrive() {
-    spaneElement.textContent = `Arriving at ${busStop.name}`;
+      spanEl.textContent = `Arriving at ${currStop}`;
+      arriveButton.disabled = true;
+      departButton.disabled = false;
 
-    departBtn.disabled = false;
-    arriveBtn.disabled = true;
   }
 
   return {
-    depart,
-    arrive,
+      depart,
+      arrive
   };
 }
 
